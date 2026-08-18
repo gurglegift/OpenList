@@ -145,6 +145,8 @@ func (d *Streamtape) Link(ctx context.Context, file model.Obj, args model.LinkAr
 			"Referer": []string{"https://streamtape.com/"},
 			"Origin":  []string{"https://streamtape.com"},
 		},
+		Concurrency: 4,
+		PartSize:    8 * 1024 * 1024,
 	}, nil
 }
 
